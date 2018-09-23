@@ -15,6 +15,7 @@ app.get('/', function (req, res) {
 
 app.use(function(err, req, res, next){
   res.status(500).send('Something bad happened! AGAIN!');
+  console.log(`El error es: ${err}`);
 });
 
 app.listen(port, ip);
